@@ -1,0 +1,110 @@
+$dark: #222;
+$black: #333;
+$gray: #666;
+$white: #ccc;
+$green: hsl(150, 50%, 50%);
+$blue: hsl(225, 50%, 50%);
+$red: hsl(0, 50%, 50%);
+
+body {
+    font-family: "raleway medium";
+    background-color: $black;
+    margin: 0;
+
+    h1 {
+        color: hsl(150, 50%, 50%);
+        &::selection {
+            background-color: $dark;
+        }
+    }
+    h2, h3, h4, h5, h6, p, ol, ul, em, strong {
+        color: $white;
+        &::selection {
+            color: $green;
+            background-color: $dark;
+        }
+    }
+    a {
+        color: $green;
+        text-decoration: none;
+        transition: color 100ms;
+        &:hover {
+            color: $blue;
+        }
+        &::selection {
+            color: $green;
+            background-color: $dark;
+        }
+    }
+    blockquote {
+        color: gray;
+        font-style: italic;
+        &::selection {
+            color: $green;
+            background-color: $dark;
+        }
+    }
+    code {
+        color: #ccc;
+        font-size: 1rem;
+    }
+
+    .navbar {
+        display: flex;
+        background-color: $dark;
+
+        .nav-item {
+            padding: 1em;
+
+            .nav-link {
+                color: $white;
+                text-decoration: none;
+                transition: color 150ms;
+                &:hover {
+                    color: $gray;
+                }
+            }
+        }
+    }
+
+    .container {
+        margin: 2em;
+    }
+
+    .btn {
+        background-color: $dark;
+        color: $green;
+        padding: 1em;
+        border-radius: 1em;
+        border: none;
+        transition: background-color 100ms;
+        transition: border-radius 100ms;
+        &:hover {
+            background-color: $gray;
+            color: $green;
+            border-radius: 2em;
+        }
+        &:active {
+            background-color: $white;
+        }
+    }
+    .btn-outline {
+        background-color: $black;
+        color: $green;
+        padding: 1em;
+        border-radius: 1em;
+        border: 0.1em solid $dark;
+        transition: color 100ms;
+        transition: border-color 100ms;
+        transition: border-radius 100ms;
+        &:hover {
+            border-color: $gray;
+            color: $green;
+            border-radius: 2em;
+            transition: border-color 100ms;
+        }
+        &:active {
+            border-color: $white;
+        }
+    }
+}
